@@ -34,7 +34,7 @@ def split_df(filename):
     }
 
     label_cols = ["phylum", "class", "order", "family", "subfamily", "genus", "species", "dna_bin"]
-    df_usecols = ["processid", "image_file", "chunk_number", "dna_barcode", "split"] + label_cols
+    df_usecols = ["processid", "dna_barcode", "split"] + label_cols
 
     bioscan_5M = pd.read_csv(filename, dtype=df_dtypes, usecols=df_usecols)
 
